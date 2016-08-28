@@ -4,11 +4,12 @@ image_resource:
   source: {repository: quay.io/desource/alpine, tag: build}
   
 run:
-  path: src/build.sh
+  path: ci/build.sh
   
 inputs:
-  - name: liblua-src
-    path: src
+  - name: liblua-ci
+    path: ci
 
 outputs:
-  - name: lua-build
+  - name: liblua
+    path: out
